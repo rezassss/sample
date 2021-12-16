@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2021-12-06T10:01:06Z"
+  labels:
+    app: dev-gosso
+    name: dev-gosso
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+          f:name: {}
+      f:spec:
+        f:ports:
+          .: {}
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app: {}
+          f:name: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: rancher
+    operation: Update
+    time: "2021-12-06T10:01:06Z"
+  name: service-go-sso
+  namespace: default
+  resourceVersion: "36611079"
+  uid: 6f25eff0-7efc-4c99-ba4f-e41c29521548
+spec:
+  clusterIP: 10.109.216.43
+  clusterIPs:
+  - 10.109.216.43
+  ports:
+  - name: go-sso-port
+    port: 80
+    protocol: TCP
+    targetPort: 8888
+  selector:
+    app: dev-gosso
+    name: dev-gosso
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
